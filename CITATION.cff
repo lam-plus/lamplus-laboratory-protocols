@@ -1,13 +1,16 @@
 cff-version: 1.2.0
-message: "TODO: Confirm citation authors and release metadata before using this starter citation."
-type: dataset
-title: "LAM+ laboratory protocols"
+message: >-
+  If you use these protocols, please cite the LAM+ Laboratory Protocols
+  repository using the metadata provided in this file.
+title: "LAM+ Laboratory Protocols"
+url: "https://github.com/lam-plus/lamplus-laboratory-protocols"
 authors:
-  - name: "TODO: Confirm institutional author or replace with confirmed contributors"
-abstract: "Public bilingual operating-protocol documentation framework for LAM+, Universidade Federal Fluminense. Starter metadata; no formal release."
+  - family-names: "Belém"
+    given-names: "André Luiz"
+    email: "andrebelem@id.uff.br"
+    affiliation: "LAM+, Universidade Federal Fluminense"
+  - family-names: "Venancio"
+    given-names: "Igor"
+    email: "ivenancio@id.uff.br"
+    affiliation: "LAM+, Universidade Federal Fluminense"
 license: CC-BY-4.0
-keywords:
-  - laboratory protocols
-  - bilingual documentation
-# TODO: Confirm authors, repository URL, version and release date at formal release.
-# Add ORCID and DOI only when verified; no publication date or DOI assigned.

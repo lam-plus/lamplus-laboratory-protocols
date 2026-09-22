@@ -1,40 +1,92 @@
-# LAM+ — Protocolos laboratoriais
+<p align="center">
+  <img src="assets/branding/logo-lamplus-transparent.png" alt="Logotipo do LAM+" width="280">
+</p>
 
-[English](README.md)
+# Protocolos do Laboratório LAM+
 
-Repositório público e aberto dos protocolos operacionais do Laboratório Multiusuário LAM+, Universidade Federal Fluminense (UFF). O Markdown é a fonte editável e versionada. Estes são protocolos do LAM+, não cópias de manuais de fabricantes.
+[English](README.md) | [Português](README.pt-BR.md)
 
-Este repositório inicial contém a estrutura documental; ainda não há protocolos operacionais aprovados.
+Este repositório reúne os protocolos operacionais públicos e versionados do **Laboratório Multiusuário LAM+** da **Universidade Federal Fluminense (UFF), Brasil**.
 
-## Sistemas
+O projeto disponibiliza orientações claras, reprodutíveis e abertamente acessíveis para a operação dos sistemas analíticos do LAM+. Os protocolos são mantidos como documentos Markdown bilíngues, em inglês e português brasileiro, e preparados para gerar documentos PDF padronizados por meio do Pandoc.
 
-- [Sistema de varredura hiperespectral (HSI)](equipment/hsi-scanning-system/README.pt-BR.md)
-- [Avaatech XRF Core Scanner](equipment/avaatech-xrf-core-scanner/README.pt-BR.md)
-- [MEV–EDS](equipment/mev-eds/README.pt-BR.md)
+## Escopo atual
 
-## Fluxo de publicação
+O repositório contempla atualmente três sistemas laboratoriais:
 
-Markdown → Pandoc → PDF → GitHub Release → Zenodo. Antes de uma publicação formal: concluir a revisão técnica, sincronizar os idiomas, validar links e imagens, gerar e inspecionar ambos os PDFs, atualizar históricos e confirmar metadados de citação e arquivamento. PDFs são artefatos de publicação; não devem ser adicionados às pastas de fontes.
+| Sistema | Descrição | Situação do protocolo |
+|---|---|---|
+| [Sistema de escaneamento HSI](equipment/hsi-scanning-system/) | Sistema integrado de escaneamento hiperespectral, incluindo câmeras, iluminação, estágio de translação, alvos de referência, software de controle, calibração, aquisição e tratamento dos dados | Desenvolvimento ainda não iniciado |
+| [Avaatech XRF Core Scanner](equipment/avaatech-xrf-core-scanner/) | Sistema de escaneamento de testemunhos por fluorescência de raios X | Protocolo existente em Word aguardando migração para Markdown |
+| [MEV–EDS](equipment/mev-eds/) | Microscopia eletrônica de varredura com espectroscopia de raios X por dispersão em energia | Desenvolvimento ainda não iniciado |
 
-As versões em inglês e português brasileiro têm igual status documental e compartilham identificador, versão, data e conteúdo técnico.
+Outros equipamentos poderão ser incorporados depois que seu escopo, suas necessidades documentais e suas responsabilidades técnicas estiverem definidos.
 
-## Modelos e geração de PDF
+## Fluxo da documentação
 
-[Modelo de protocolo](templates/protocol-template.pt-BR.md) · [AGENTS.md](AGENTS.md)
+Os arquivos Markdown são as fontes editáveis oficiais. O fluxo de publicação previsto é:
 
-Execute na raiz do repositório. Testado com Pandoc 3.9 e XeLaTeX. Dependências: Pandoc 3.9 ou posterior e XeLaTeX, com os pacotes TeX fontspec, polyglossia (inglês e português), geometry, graphicx, longtable, booktabs, array, calc, etoolbox, amsmath, amssymb, xcolor e hyperref. Não é necessário pandoc-crossref. O realce de sintaxe está desativado. Figuras com legendas e tabelas usam os recursos nativos do Pandoc; referências automáticas cruzadas não estão configuradas.
-
-```sh
-pandoc --defaults=templates/defaults-en.yaml templates/protocol-template.md -o /tmp/lam-template-en.pdf
-pandoc --defaults=templates/defaults-pt-BR.yaml templates/protocol-template.pt-BR.md -o /tmp/lam-template-pt-BR.pdf
+```text
+Markdown → revisão técnica → PDF com Pandoc → GitHub Release → Zenodo
 ```
 
-Para protocolos reais, acrescente `--resource-path=.:equipment/<system>/protocols` ao comando para resolver imagens relativas ao protocolo. Substitua os marcadores antes da revisão; a data do modelo é apenas a data de criação da estrutura, não uma data de publicação.
+As versões em inglês e português do mesmo protocolo compartilham o mesmo identificador, versão, situação de aprovação e conteúdo técnico. Os PDFs são produtos gerados e não devem ser editados diretamente.
 
-## Licença e metadados
+As versões publicadas serão arquivadas no **Zenodo**, proporcionando acesso permanente e registros citáveis. A primeira publicação no Zenodo ainda não foi realizada e será anunciada neste documento quando estiver disponível.
 
-A documentação e as figuras originais de protocolos usam CC BY 4.0; a licença de software, automação e modelos LaTeX permanece a definir. Marcas institucionais e materiais de terceiros exigem autorização própria. Consulte [LICENSE](LICENSE).
+## Organização do repositório
 
-[CITATION.cff](CITATION.cff) · [.zenodo.json](.zenodo.json) · [CHANGELOG.md](CHANGELOG.md)
+```text
+equipment/              Protocolos e imagens específicos dos equipamentos
+templates/              Templates bilíngues para Markdown e Pandoc
+assets/branding/        Identidade visual do LAM+ e institucional
+TODO.md                 Roteiro de desenvolvimento e publicação
+CHANGELOG.md            Alterações incorporadas às versões do repositório
+AGENTS.md               Instruções do repositório para agentes de programação
+```
 
-TODO: confirmar responsáveis pela autoria/citação, revisores, metadados da publicação e licença de software. Nenhum DOI ou data de publicação foi atribuído. Não publicar os metadados provisórios no Zenodo.
+As imagens específicas dos equipamentos ficam armazenadas junto ao respectivo sistema. Os elementos compartilhados de identidade visual ficam em `assets/branding/`.
+
+## Protocolos e manuais dos fabricantes
+
+Estes documentos são **protocolos operacionais do LAM+**, desenvolvidos para os sistemas instalados e utilizados no laboratório. Eles não são cópias nem substitutos dos manuais dos fabricantes.
+
+A documentação dos fabricantes permanece como referência técnica importante. Os usuários devem consultar as instruções aplicáveis sempre que necessário, especialmente para limites de segurança, manutenção, atividades regulamentadas e procedimentos que não estejam contemplados em um protocolo do LAM+.
+
+## Como contribuir
+
+Sugestões, correções, traduções e aperfeiçoamentos técnicos são bem-vindos por meio de issues e pull requests no GitHub.
+
+O acesso público não significa que as alterações propostas serão aceitas automaticamente. Mudanças que afetem procedimentos operacionais, calibração, segurança, configurações instrumentais ou critérios de controle de qualidade precisam ser avaliadas pelos responsáveis técnicos do LAM+ antes da aprovação.
+
+Antes de contribuir:
+
+1. consulte o diretório do equipamento e o arquivo `TODO.md`;
+2. preserve a organização bilíngue;
+3. utilize caminhos relativos para imagens e links internos;
+4. informe a origem e a licença das imagens adicionadas;
+5. não inclua manuais proprietários, informações confidenciais, credenciais, dados pessoais ou configurações instrumentais não verificadas.
+
+As orientações detalhadas para contribuição serão mantidas em `CONTRIBUTING.md`.
+
+## Situação documental e segurança
+
+Os protocolos podem ser identificados como `Draft`, `Under review`, `Approved`, `Superseded` ou `Retired`. Somente documentos explicitamente identificados como **Approved** devem ser considerados procedimentos operacionais autorizados pelo LAM+.
+
+Os usuários continuam responsáveis por cumprir os requisitos de treinamento do laboratório, as normas institucionais de segurança, os requisitos de proteção radiológica, as instruções dos fabricantes e a regulamentação aplicável. Um protocolo público não substitui a autorização específica para uso do equipamento nem o treinamento supervisionado.
+
+## Licença e atribuição
+
+Salvo indicação em contrário, a documentação original dos protocolos será disponibilizada sob a licença **Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)**.
+
+Nomes institucionais, logotipos e marcas não estão automaticamente abrangidos pela licença da documentação. Materiais de terceiros permanecem sujeitos aos respectivos direitos e condições de licenciamento.
+
+As informações para citação serão disponibilizadas por meio do arquivo `CITATION.cff` e do futuro registro no Zenodo.
+
+## Contato
+
+Dúvidas, sugestões e solicitações de informações adicionais podem ser encaminhadas por meio do sistema de issues deste repositório no GitHub ou diretamente para:
+
+- **Igor Venancio:** [ivenancio@id.uff.br](mailto:ivenancio@id.uff.br)
+- **André Belém:** [andrebelem@id.uff.br](mailto:andrebelem@id.uff.br)
+
