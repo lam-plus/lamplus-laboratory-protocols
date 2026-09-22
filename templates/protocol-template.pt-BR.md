@@ -1,85 +1,105 @@
 ---
-title: "TODO: Título do protocolo"
+title: "Título do protocolo"
 subtitle: "Procedimento Operacional Padrão"
 protocol_id: "LAM-XXX-000"
 version: "0.1.0"
-date: "2026-09-22"
+date: "YYYY-MM-DD"
 language: "pt-BR"
 authors:
-  - name: "TODO"
+  - name: "Nome do autor"
     affiliation: "LAM+, Universidade Federal Fluminense"
 reviewers: []
-equipment: "TODO"
+equipment: "Nome do equipamento ou sistema"
 status: "Draft"
 license: "CC BY 4.0"
 keywords: []
 ---
 
-[English](protocol-template.md)
-
-> MODELO — não é um protocolo operacional. LAM-XXX-000 é um marcador, não um identificador atribuído. A data ISO acima indica a criação da estrutura, não aprovação ou publicação; substitua-a pela data do documento. Preencha todos os TODOs e confirme autores, revisores, equipamento e palavras-chave antes da revisão. O status canônico Draft significa Rascunho.
-
-Ao copiar para a pasta protocols/ do equipamento, atualize o link de idioma. Exemplos de sintaxe apenas; a imagem não existe:
-
-```markdown
-[English](example.md)
-![Legenda descritiva.](../assets/common/example-image.png){#fig-example width=85%}
-```
+[English](protocol-name.md) | [Português](protocol-name.pt-BR.md)
 
 # Objetivo e escopo
 
-TODO: Definir uso pretendido, limites e sistema abrangido.
+<!-- Informe o que o protocolo abrange, seus usuários e eventuais exclusões. -->
 
-# Responsabilidades e treinamento obrigatório
+# Responsabilidades e treinamento necessário
 
-TODO: Identificar responsáveis, treinamento obrigatório e autorização.
+<!-- Identifique usuários autorizados, supervisão necessária e responsabilidades. -->
 
 # Requisitos de segurança
 
-TODO: Documentar perigos e controles verificados. Perigos regulamentados exigem revisão qualificada antes da publicação formal.
+<!-- Liste EPIs, riscos, controles de emergência e condições para interrupção. -->
 
-# Equipamentos, software e materiais
+# Equipamentos softwares e materiais
 
-TODO: Listar equipamentos verificados, versões de software e materiais.
+<!-- Liste o sistema, acessórios, softwares, padrões e materiais de consumo. -->
 
 # Requisitos e preparação das amostras
 
-TODO: Definir critérios validados de elegibilidade, identificação e preparação das amostras.
+<!-- Defina amostras aceitáveis, inspeção, preparação, montagem e rejeição. -->
 
-# Configuração do instrumento ou sistema
+# Verificações antes da operação
 
-TODO: Documentar etapas verificadas de configuração e resultados esperados.
+- [ ] A área de trabalho está liberada.
+- [ ] O equipamento não apresenta danos visíveis.
+- [ ] Os sistemas de segurança estão operacionais.
+- [ ] Os padrões e materiais necessários estão disponíveis.
+- [ ] A identificação da amostra e o diretório de dados estão confirmados.
+
+# Inicialização do sistema
+
+<!-- Apresente a sequência para ligar e conectar o sistema. -->
 
 # Calibração e medições de referência
 
-TODO: Registrar referências validadas, etapas de calibração, unidades e fontes.
+<!-- Descreva padrões, etapas de calibração e critérios de aceitação. -->
 
-# Procedimento de aquisição ou operação
+# Configuração da aquisição
 
-TODO: Redigir etapas numeradas e verificadas. Distinguir ações obrigatórias, recomendações, advertências e resultados esperados.
+<!-- Separe parâmetros ajustáveis pelo usuário daqueles que não devem ser alterados. -->
 
-# Controle de qualidade e critérios de aceitação
+| Parâmetro | Valor ou intervalo | Unidade | O operador pode alterar | Observações |
+|---|---:|---|---|---|
+|  |  |  |  |  |
 
-TODO: Definir verificações e critérios de aceitação validados com evidências.
+# Procedimento de operação
 
-# Organização de dados, nomes de arquivos e metadados
+1. <!-- Primeira ação. -->
+2. <!-- Ação seguinte. -->
+3. <!-- Verificação ou resultado esperado. -->
 
-TODO: Definir identificadores de projetos/amostras, separação de dados brutos, intermediários e processados, nomes, metadados instrumentais preservados, registros de calibração/controle de qualidade, formatos de exportação, backup, retenção e transformações documentadas. Não expor detalhes sensíveis de rede nem dados de pesquisa/pessoais.
+<!-- Exemplo de figura. Substitua arquivo, legenda e identificador. -->
 
-# Desligamento, limpeza e cuidados de rotina
+![Legenda descritiva.](../assets/common/example-image.png){#fig-example width=85%}
 
-TODO: Documentar procedimentos validados de desligamento, limpeza e cuidados de rotina.
+# Processamento dos dados
+
+<!-- Opcional. Descreva entradas, software, sequência de processamento e produtos. -->
+
+# Controle de qualidade
+
+<!-- Defina verificações, flags, critérios de aceitação e arquivos de QC. -->
+
+# Organização e nomenclatura dos dados
+
+<!-- Defina diretórios, nomes, metadados, separação bruto/processado e backup. -->
+
+# Encerramento limpeza e cuidados de rotina
+
+<!-- Inclua verificação dos dados, retirada da amostra, limpeza, standby e desligamento. -->
 
 # Solução de problemas
 
-TODO: Registrar sintomas, ações corretivas verificadas e critérios de encaminhamento.
+| Sintoma | Causa provável | Ação permitida ao operador | Contatar o suporte técnico quando |
+|---|---|---|---|
+|  |  |  |  |
 
 # Referências e documentos relacionados
 
-TODO: Citar fontes, versões de manuais e seções/páginas. Distinguir especificações do fabricante de decisões validadas do LAM+. Não reproduzir conteúdo protegido.
+<!-- Cite os manuais por versão sem reproduzir conteúdo protegido. -->
 
 # Histórico de revisões
 
-| Versão | Data | Alteração | Responsável |
-| --- | --- | --- | --- |
-| 0.1.0 | 2026-09-22 | Modelo inicial; substituir ao criar o protocolo. | TODO |
+| Versão | Data | Alteração | Autor | Aprovação |
+|---|---|---|---|---|
+| 0.1.0 | YYYY-MM-DD | Versão inicial |  | Pendente |
+

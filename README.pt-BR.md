@@ -90,3 +90,10 @@ Dúvidas, sugestões e solicitações de informações adicionais podem ser enca
 - **Igor Venancio:** [ivenancio@id.uff.br](mailto:ivenancio@id.uff.br)
 - **André Belém:** [andrebelem@id.uff.br](mailto:andrebelem@id.uff.br)
 
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para conhecer as diretrizes de contribuição.
+
+## Licença
+
+Salvo indicação em contrário, o conteúdo original deste repositório está licenciado sob a [Licença Creative Commons Atribuição 4.0 Internacional](LICENSE).
+
+Imagens de terceiros, marcas, programas, manuais e outros materiais provenientes de fontes externas permanecem sujeitos às respectivas licenças e condições de uso.

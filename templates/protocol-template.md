@@ -1,85 +1,105 @@
 ---
-title: "TODO: Protocol title"
+title: "Protocol title"
 subtitle: "Standard Operating Procedure"
 protocol_id: "LAM-XXX-000"
 version: "0.1.0"
-date: "2026-09-22"
+date: "YYYY-MM-DD"
 language: "en"
 authors:
-  - name: "TODO"
+  - name: "Author name"
     affiliation: "LAM+, Universidade Federal Fluminense"
 reviewers: []
-equipment: "TODO"
+equipment: "Equipment or system name"
 status: "Draft"
 license: "CC BY 4.0"
 keywords: []
 ---
 
-[Português brasileiro](protocol-template.pt-BR.md)
-
-> TEMPLATE — not an operating protocol. LAM-XXX-000 is a placeholder, not an assigned identifier. The ISO date above records scaffold creation, not approval or publication; replace it with the document date. Complete all TODOs and confirm authors, reviewers, equipment, and keywords before review.
-
-When copying into the equipment protocols/ directory, update the language link. Syntax examples only; the image does not exist:
-
-```markdown
-[Português brasileiro](example.pt-BR.md)
-![Descriptive caption.](../assets/common/example-image.png){#fig-example width=85%}
-```
+[English](protocol-name.md) | [Português](protocol-name.pt-BR.md)
 
 # Purpose and scope
 
-TODO: Define the intended use, boundaries, and system covered.
+<!-- State what this protocol covers, its intended users and any exclusions. -->
 
 # Responsibilities and required training
 
-TODO: Identify responsible roles, required training, and authorization.
+<!-- Identify authorized users, required supervision and responsibilities. -->
 
 # Safety requirements
 
-TODO: Document verified hazards and controls. Regulated hazards require qualified review before formal release.
+<!-- List PPE, hazards, emergency controls and conditions that require stopping. -->
 
-# Equipment, software, and materials
+# Equipment software and materials
 
-TODO: List verified equipment, software versions, and materials.
+<!-- List the main system, accessories, software, standards and consumables. -->
 
 # Sample requirements and preparation
 
-TODO: Define validated sample eligibility, identification, and preparation.
+<!-- Define acceptable samples, inspection, preparation, mounting and rejection criteria. -->
 
-# Instrument or system setup
+# Pre operation checks
 
-TODO: Document verified setup steps and expected results.
+- [ ] Work area is clear.
+- [ ] Equipment shows no visible damage.
+- [ ] Safety systems are operational.
+- [ ] Required standards and consumables are available.
+- [ ] Sample identification and data directory are confirmed.
+
+# System startup
+
+<!-- Provide the ordered startup and connection procedure. -->
 
 # Calibration and reference measurements
 
-TODO: Record validated references, calibration steps, units, and sources.
+<!-- Describe standards, calibration steps and acceptance criteria. -->
 
-# Acquisition or operating procedure
+# Acquisition settings
 
-TODO: Write numbered, verified steps. Distinguish mandatory actions, recommendations, warnings, and expected results.
+<!-- Separate user-adjustable parameters from parameters that must not be changed. -->
 
-# Quality control and acceptance criteria
+| Parameter | Value or range | Unit | May the operator change it | Notes |
+|---|---:|---|---|---|
+|  |  |  |  |  |
 
-TODO: Define validated checks and acceptance criteria with supporting evidence.
+# Operating procedure
 
-# Data organization, file naming, and metadata
+1. <!-- First action. -->
+2. <!-- Next action. -->
+3. <!-- Verification or expected result. -->
 
-TODO: Define project/sample identifiers, raw/intermediate/processed separation, naming, preserved instrument metadata, calibration/QC records, export formats, backup and retention requirements, and documented transformations. Do not expose sensitive network details or research/personal data.
+<!-- Example figure. Replace the filename, caption and identifier. -->
 
-# Shutdown, cleaning, and routine care
+![Descriptive caption.](../assets/common/example-image.png){#fig-example width=85%}
 
-TODO: Document validated shutdown, cleaning, and routine care.
+# Data processing
+
+<!-- Optional. Describe input files, software, processing sequence and outputs. -->
+
+# Quality control
+
+<!-- Define checks, flags, acceptance criteria and required QC files. -->
+
+# Data organization and file naming
+
+<!-- Define directories, filenames, metadata, raw/processed separation and backup. -->
+
+# Shutdown cleaning and routine care
+
+<!-- Include data verification, sample removal, cleaning, standby and shutdown. -->
 
 # Troubleshooting
 
-TODO: Record symptoms, verified corrective actions, and escalation criteria.
+| Symptom | Probable cause | Operator action | Contact technical support when |
+|---|---|---|---|
+|  |  |  |  |
 
 # References and related documents
 
-TODO: Cite sources, manual versions and sections/pages. Distinguish manufacturer specifications from validated LAM+ decisions. Do not reproduce protected content.
+<!-- Cite manufacturer manuals by version without reproducing protected content. -->
 
 # Revision history
 
-| Version | Date | Change | Responsible person |
-| --- | --- | --- | --- |
-| 0.1.0 | 2026-09-22 | Initial template; replace when creating a protocol. | TODO |
+| Version | Date | Change | Author | Approval |
+|---|---|---|---|---|
+| 0.1.0 | YYYY-MM-DD | Initial draft |  | Pending |
+
