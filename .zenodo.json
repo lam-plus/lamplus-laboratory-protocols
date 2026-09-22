@@ -1,0 +1,19 @@
+{
+  "title": "LAM+ laboratory protocols",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "description": "Public bilingual operating-protocol documentation framework for LAM+, Universidade Federal Fluminense. TODO: Confirm creators and release metadata before deposit; this scaffold is not a formal release.",
+  "creators": [
+    {
+      "name": "TODO: Confirm creator name",
+      "affiliation": "LAM+, Universidade Federal Fluminense"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "laboratory protocols",
+    "bilingual documentation"
+  ],
+  "notes": "TODO: Replace creator placeholder; confirm contributor roles, release version and publication date at deposit. No DOI assigned. Do not submit this starter metadata."
+}

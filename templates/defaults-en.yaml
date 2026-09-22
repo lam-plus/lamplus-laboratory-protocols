@@ -1,0 +1,23 @@
+# Run from the repository root. Add the protocol directory to resource-path
+# for equipment documents; paths are resolved from the working directory.
+from: markdown
+to: latex
+standalone: true
+pdf-engine: xelatex
+template: templates/pdf-template.tex
+table-of-contents: true
+toc-depth: 2
+number-sections: true
+syntax-highlighting: none
+resource-path:
+  - .
+  - templates
+metadata:
+  lang: en
+variables:
+  tex-language: english
+  toc-title: Contents
+  protocol-label: Protocol
+  version-label: Version
+  language-label: Language
+  status-label: Status

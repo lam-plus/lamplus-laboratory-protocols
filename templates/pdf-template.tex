@@ -1,0 +1,76 @@
+% Shared XeLaTeX layout. UTF-8 text uses TeX's bundled Latin Modern fonts.
+% Optional lam-logo / uff-logo paths are relative to the repository root.
+% No branding asset is required; absent files are safely omitted.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{$if(tex-language)$$tex-language$$else$english$endif$}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{etoolbox}
+% Keep literal Markdown examples within the printable width.
+\AtBeginEnvironment{verbatim}{\small}
+% Pandoc longtable output may follow a heading directly.
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+\usepackage{xcolor}
+\usepackage[unicode,hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Pandoc 3.x wraps images with pandocbounded; preserve aspect ratio.
+\newsavebox\pandocimagebox
+\newcommand*\pandocbounded[1]{%
+  \sbox\pandocimagebox{#1}%
+  \ifdim\wd\pandocimagebox>\linewidth
+    \resizebox{\linewidth}{!}{\usebox\pandocimagebox}%
+  \else\usebox\pandocimagebox\fi}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>0.8\textheight 0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\providecommand{\passthrough}[1]{#1}
+$if(numbersections)$
+\setcounter{secnumdepth}{3}
+$else$
+\setcounter{secnumdepth}{-1}
+$endif$
+\pagestyle{plain}
+\begin{document}
+\begin{center}
+$if(lam-logo)$
+\IfFileExists{$lam-logo$}{\includegraphics[width=25mm,height=18mm,keepaspectratio]{$lam-logo$}}{}
+$endif$
+$if(uff-logo)$
+\IfFileExists{$uff-logo$}{\includegraphics[width=25mm,height=18mm,keepaspectratio]{$uff-logo$}}{}
+$endif$
+
+{\LARGE\bfseries $title$\par}
+$if(subtitle)$
+\medskip {\large $subtitle$\par}
+$endif$
+\medskip
+$for(authors)$
+$authors.name$\par
+$if(authors.affiliation)$
+{\small $authors.affiliation$\par}
+$endif$
+$endfor$
+\medskip
+$protocol-label$: $protocol_id$\quad $version-label$: $version$\par
+$date$\quad $language-label$: $language$\par
+$status-label$: $status$\par
+$if(equipment)$$equipment$\par$endif$
+$if(license)$$license$\par$endif$
+\end{center}
+$if(toc)$
+\renewcommand{\contentsname}{$toc-title$}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\clearpage
+$endif$
+$body$
+\end{document}
